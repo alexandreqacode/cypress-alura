@@ -8,4 +8,5 @@ describe('Nome da Suite de Testes', ()=>{
         cy.get('.header-barraBusca-form-submit').click();
         cy.get('h4.busca-resultado-nome').should('contain', 'Formação Java e Orientação a Objetos');
     })
+    //teste
 })
