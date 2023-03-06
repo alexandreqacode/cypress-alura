@@ -1,0 +1,32 @@
+[
+    {
+        "email": "teste1@rerey5.com",
+        "fullName": "Obi Wan Kenobi",
+        "userName": "kenobido",
+        "password": "allsithmustdie"    
+    },
+    {
+        "email": "teste1@rere2y5.com",
+        "fullName": "Qui Gon Jinn",
+        "userName": "Quigon",
+        "password": "allsithmustdie"    
+    },
+    {
+        "email": "teste1@reccrey5.com",
+        "fullName": "Luke SkyWalker",
+        "userName": "Lukes",
+        "password": "allsithmustdie"    
+    },
+    {
+        "email": "teste1@rerey785.com",
+        "fullName": "Count Dooku",
+        "userName": "Dookan",
+        "password": "allsithmustdie"    
+    },
+    {
+        "email": "teste1@re651rey5.com",
+        "fullName": "Maul One",
+        "userName": "Maulzinho",
+        "password": "alljedimustdie"    
+    }
+]

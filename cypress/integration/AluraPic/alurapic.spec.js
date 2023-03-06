@@ -41,15 +41,28 @@ describe('Login e registr de usuário no Alura Pic', ()=>{
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'User name is required!').should('be.visible');
     })
-    it.only('Login com usuário válido', ()=>{
+    it('Login com usuário válido', ()=>{
         cy.login('flavio', '123');
         cy.contains('a', '(Logout)').should('be.visible');
         })
-    it.only('Login com usuário inválido', ()=>{
+    it('Login com usuário inválido', ()=>{
         cy.login('flavis', '1244');
         cy.on('window:alert', (str)=>{
             expect(str).to.equal('Invalid user name or password');
             })
-            })
+        })
+    const usuarios = require('../../fixtures/usuarios.json');
+    usuarios.forEach(usuario =>{
+
+        it.only(`Registra novo usuário ${usuario.userName}`, ()=>{
+            cy.contains('a', 'Register now').click();
+            cy.get('input[formcontrolname="email"]').type(usuario.email);
+            cy.get('input[formcontrolname="fullName"]').type(usuario.fullName);
+            cy.get('input[formcontrolname="userName"]').type(usuario.userName);
+            cy.get('input[formcontrolname="password"]').type(usuario.password);
+            cy.contains('button', 'Register').click();
+        })
+
+    });
     
 })
