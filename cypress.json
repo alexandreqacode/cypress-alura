@@ -9,5 +9,6 @@
         "timestamp": "mmddyyyy_HHMMss"
         },
 
-        "projectId": "pucy53"
+        "projectId": "pucy53",
+        "baseUrl": "https://alura-fotos.herokuapp.com"
   }

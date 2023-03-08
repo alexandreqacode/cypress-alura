@@ -3,7 +3,7 @@ const { it } = require("mocha");
 
 describe('Login e registr de usuário no Alura Pic', ()=>{
     beforeEach(()=>{
-        cy.visit('https://alura-fotos.herokuapp.com')
+        cy.visit('/')
     })
     it('Verifica mensagens validação', ()=>{
         cy.contains('a', 'Register now').click();
@@ -41,8 +41,8 @@ describe('Login e registr de usuário no Alura Pic', ()=>{
         cy.contains('button', 'Register').click();
         cy.contains('ap-vmessage', 'User name is required!').should('be.visible');
     })
-    it('Login com usuário válido', ()=>{
-        cy.login('flavio', '123');
+    it.only('Login com usuário válido', ()=>{
+        cy.login(Cypress.env('userName'), Cypress.env('password'));
         cy.contains('a', '(Logout)').should('be.visible');
         })
     it('Login com usuário inválido', ()=>{
